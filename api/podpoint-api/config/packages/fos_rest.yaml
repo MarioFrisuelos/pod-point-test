@@ -1,0 +1,15 @@
+# Read the documentation: https://symfony.com/doc/master/bundles/FOSRestBundle/index.html
+fos_rest:
+    param_fetcher_listener: true
+    allowed_methods_listener: true
+    body_listener: true
+    routing_loader: false
+    view:
+        view_response_listener: force
+        failed_validation: HTTP_BAD_REQUEST
+    format_listener:
+        rules:
+            - { path: '^/', priorities: ['json'], fallback_format: 'json', prefer_extension: false }  
+    serializer:
+        serialize_null: true
+

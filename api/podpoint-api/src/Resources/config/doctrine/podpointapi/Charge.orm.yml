@@ -1,0 +1,23 @@
+App\Entity\Charge:
+    type: entity
+    repositoryClass: App\Repository\chargeRepository
+    table: charge
+    schema: podpointapi
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        start:
+            type: datetime
+        end:
+            type: datetime
+            nullable: true
+    manyToOne:
+        unit:
+            targetEntity: App\Entity\Unit
+            cascade: ["persist"]
+            joinColumn:
+                name: unit_id
+                referencedColumnName: id

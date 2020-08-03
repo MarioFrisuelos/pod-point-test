@@ -1,0 +1,30 @@
+# Status Controller
+# =============================================
+get_status:
+    path: /status
+    methods: [GET]
+    controller: App\Controller\StatusController::getAction
+
+
+# Units Controller
+# =============================================
+set_units:
+    path: /units/{unitId}
+    methods: [POST]
+    controller: App\Controller\UnitController::setAction
+
+patch_units:
+    path: /units/{unitId}/charges/{chargeId}
+    methods: [PUT]
+    controller: App\Controller\UnitController::patchAction
+
+list_units:
+    path: /units
+    methods: [GET]
+    controller: App\Controller\UnitController::listAction
+
+get_units:
+    path: /units/{unitId}
+    methods: [GET]
+    controller: App\Controller\UnitController::getAction
+

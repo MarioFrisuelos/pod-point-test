@@ -1,0 +1,27 @@
+App\Entity\Unit:
+    type: entity
+    repositoryClass: App\Repository\UnitRepository
+    table: unit
+    schema: podpointapi
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        address: 
+            type: string
+            length: 255
+        postcode: 
+            type: string
+            length: 50
+        name:
+            type: string
+            length: 255
+        status:
+            type: string
+            columnDefinition: ENUM('available', 'charging')
+    oneToMany:
+        charges:
+            targetEntity: App\Entity\Charge
+            mappedBy: unit

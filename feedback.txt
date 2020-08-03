@@ -1,0 +1,19 @@
++	Feedback
++	================================ 
+
+
++	Pros:
+	-	Backend tests
+	-	Followed api specs
+	-	Lean controllers
+
+
++	Cons
+	-	Inconsistent code style, missing type hinting in some places, unclear - function/component naming on BE and FE
+	-	no validation
+	-	not restful approach, everything is under the same controller
+	-	http status codes defined on the helper instead of controller
+	-	no frontend tests
+	-	no api client
+	-	there’s no api client, or api abstraction
+	
